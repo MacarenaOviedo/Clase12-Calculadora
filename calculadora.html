@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<title>Macarena Oviedo</title>
+	<meta charset="UTF8">
+	<meta name="description" content="hi!">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script type="text/javascript">
+		//var alturaPagina = 100;
+		//var anchoPagina = 50;
+		//var areaPagina = alturaPagina*anchoPagina;
+		//var nickname = "coderhouse";
+		//var name = "Macarena ";
+		//var apellido = "Oviedo";
+
+		function calculadora(operador1, operador2, operacion){
+		//Todos los pasos de mi funcion se definen en este paréntesis.
+			var resultado;
+			var x=document.getElementById("operador1");
+			var x=document.getElementById("operador2");
+			var operacion;
+
+			switch (operacion){
+				case "suma":
+					resultado = operador1+operador2;
+					break;
+				case "resta":
+					resultado = operador1-operador2;
+					break;
+				case "multiplica":
+					resultado = operador1*operador2;
+					break;
+				case "divide":
+					resultado = operador1/operador2;
+					break;
+			}
+			return resultado;
+		}
+		//console.log("Ingresa el primer número");
+
+		var resultado = calculadora(4, 2, "suma");
+		var resultado1 = calculadora(4, 2, "resta");
+		var resultado2 = calculadora(4, 2, "multiplica");
+		var resultado3 = calculadora(4, 2, "divide");
+		
+		alert(resultado);
+		alert(resultado1);
+		alert(resultado2);
+		alert(resultado3);
+
+	</script>
+
+</head>
+<body>
+	<div class="cont-grande">
+		<header>
+			<form>
+				Valor 1:<input type="text" value="" placeholder="Ingresar valor 1" id="operador1">
+				Valor 2:<input type="text" value="" placeholder="Ingresar valor 2" id="operador2">
+				Operación:
+
+				<input onclick="calculadora()" type="Button" name="" value="Sumar">
+				<input onclick="calculadora()" type="Button" name="" value="Restar">
+				<input onclick="calculadora()" type="Button" name="" value="Multiplicar">
+				<input onclick="calculadora()" type="Button" name="" value="Dividir">
+
+			</form>
+
+		</header>
+	
+	</div>
+
+</body>
